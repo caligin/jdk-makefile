@@ -31,7 +31,6 @@ target/$(JCE_ZIP_ROOT): $(JCE_ZIP) | target/
 	unzip $(JCE_ZIP) -d target
 
 target/$(DEB): target/$(JDK_TAR_ROOT)/ target/$(JCE_ZIP_ROOT)/ postinst.template postrm.template | target/
-	echo $(DEB)
 	cp target/$(JCE_ZIP_ROOT)/local_policy.jar target/jdk$(VERSION)/jre/lib/security/
 	cp target/$(JCE_ZIP_ROOT)/US_export_policy.jar target/jdk$(VERSION)/jre/lib/security/
 	cp postinst.template target/

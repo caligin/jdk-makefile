@@ -39,7 +39,7 @@ Alternatives
 This does not rely on update-java-alternatives and .jinfo files but installs all tools as a slave alternative of java instead.
 
 Please note that if you already have a jdk package installed that sets them all as master installation will break.
-Sorry but as now I have no idea about how to handle this other than removing all other jdks before installing (that is my goal anyway...). If you have suggestions, open a ticket!
+Sorry but as now I have no idea about how to handle this other than removing all other jdks before installing (that is my goal anyway...). If you have suggestions (or think I'm dead wrong about how packaging and alternatives should be handled), open a ticket!
 
 Requirements
 =

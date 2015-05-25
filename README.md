@@ -3,8 +3,9 @@ Why
 - If jdk is not a .deb with appropriate 'provides' other versions might be installed as dependency.
 - Want to avoid multiple versions of the platform unless *really* necessary. Less versions, less headache.
 - In case of that happening, we want to be able to use the alternatives system.
-- Enforce security configuration on crypto. (e.g. disable weak cyphers, enable jce unlimited)
+- Enforce security configuration on crypto. (e.g. disable weak cyphers (TODO), enable jce unlimited)
 - JDK license. If it has to be accepted, accept it. But at least make it 'accept & package once, install on all machines/vms/containers'
+- Alternatives have a "slave" mechanism, then why do we need to rely on update-java-alternatives and .jinfo files??
 
 Why not Web Upd8
 =
@@ -32,6 +33,13 @@ I hate to say this, but that license should be accepted and I won't provide a sc
 - place the files in the same directory as `Makefile` and this `README.md`.
 - `make`
 - profit!
+
+Alternatives
+=
+This does not rely on update-java-alternatives and .jinfo files but installs all tools as a slave alternative of java instead.
+
+Please note that if you already have a jdk package installed that sets them all as master installation will break.
+Sorry but as now I have no idea about how to handle this other than removing all other jdks before installing (that is my goal anyway...). If you have suggestions, open a ticket!
 
 Requirements
 =

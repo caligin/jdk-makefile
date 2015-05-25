@@ -6,6 +6,11 @@ Why
 - Enforce security configuration on crypto. (e.g. disable weak cyphers, enable jce unlimited)
 - JDK license. If it has to be accepted, accept it. But at least make it 'accept & package once, install on all machines/vms/containers'
 
+Why not webupd8
+=
+- I'm not ok with the package installation to be interactive
+- I'm not ok with no one willingly clicking the "I accept" button when using the apt-get skip-interactive features 
+
 JDK license considerations
 =
 The license agreement is personal || company-wise if you accept it representing your company (and have the right to), therefore downloading it once, package it for internal use & distribute it inside the boundaries of your machines || your organization should be ok.
@@ -14,7 +19,7 @@ It also states that distribution should be of "the entire thing" and "without mo
 
 If this reveals to be actually an issue, putting the replacement & config steps in a postinstall script *should* be enough to work around this.
 
-But... *I DO NOT SPEAK LEGALESE SO ALL OF THIS IS MY (possibly very wrong) UNDERSTANDING OF THE LICESE. IF YOU KNOW THAT THIS IS VERY WRONG PLEASE TELL ME AT ONCE*.
+But... *I DO NOT SPEAK LEGALESE SO ALL OF THIS IS MY (possibly very wrong) UNDERSTANDING OF THE LICESE. IF YOU KNOW THAT ANY OF THIS IS WRONG PLEASE TELL ME AT ONCE*.
 
 How
 =

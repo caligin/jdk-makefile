@@ -5,4 +5,8 @@ echo "testing correct version present after install"
 echo "testing removal"
 dpkg -r $PACKAGE
 echo "testing no java available after removal"
-[ -z $(which java) ]
+if update-alternatives --display java; then
+    /bin/false
+else
+    /bin/true
+fi
